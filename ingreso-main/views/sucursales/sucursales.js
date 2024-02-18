@@ -30,7 +30,7 @@ function init() {
           })'>Editar</button>
   <button class='btn btn-warning' click='eliminar(${
     sucursal.SucursalId
-          })'>Editar</button>
+          })'>Eliminar</button>
               `;
         });
         $("#ListaSucursales").html(html);
@@ -61,6 +61,27 @@ function init() {
       cache: false,
       success: (respuesta) => {
         console.log(respuesta);
+        if (respuesta.trim() !== "") {
+          try {
+            respuesta = JSON.parse(respuesta);
+            if (respuesta === "ok") {
+              alert("Se guardó con éxito");
+              CargaLista();
+              LimpiarCajas();
+            } else {
+              alert("Algo salió mal");
+            }
+          } catch (error) {
+            console.error("Error al analizar la respuesta JSON:", error);
+            alert("Error al procesar la respuesta del servidor");
+          }
+        } else {
+          console.error("La respuesta del servidor está vacía");
+          alert("La respuesta del servidor está vacía");
+        }
+      },
+      /*success: (respuesta) => {
+        console.log(respuesta);
         respuesta = JSON.parse(respuesta);
         if (respuesta == "ok") {
           alert("Se guardo con éxito");
@@ -69,7 +90,7 @@ function init() {
         } else {
           alert("no tu pendejada");
         }
-      },
+      },*/
     });
   };
   

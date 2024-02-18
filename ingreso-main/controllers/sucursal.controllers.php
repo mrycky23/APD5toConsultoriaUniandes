@@ -24,6 +24,23 @@ switch ($_GET["op"]) {
         $res = mysqli_fetch_assoc($datos);
         echo json_encode($res);
         break;
+
+        /*case 'insertar':
+            $Nombre = $_POST["Nombre"];
+            $Direccion = $_POST["Direccion"];
+            $Telefono = $_POST["Telefono"];
+            $Correo = $_POST["Correo"];
+            $Parroquia = $_POST["Parroquia"];
+            $Canton = $_POST["Canton"];
+            $Provincia = $_POST["Provincia"];
+            $datos = $Sucursales->Insertar($Nombre, $Direccion, $Telefono, $Correo, $Parroquia, $Canton, $Provincia);
+            if ($datos) {
+                echo json_encode($datos);
+            } else {
+                echo json_encode(array("error" => "No se pudo insertar la sucursal."));
+            }
+            break;*/
+        
         /* Procedimiento para insertar una nueva sucursal */
     case 'insertar':
         $Nombre = $_POST["Nombre"];
@@ -33,10 +50,11 @@ switch ($_GET["op"]) {
         $Parroquia = $_POST["Parroquia"];
         $Canton = $_POST["Canton"];
         $Provincia = $_POST["Provincia"];
-
+        $datos = array();
         $datos = $Sucursales->Insertar($Nombre, $Direccion, $Telefono, $Correo, $Parroquia, $Canton, $Provincia);
         echo json_encode($datos);
         break;
+        
        
     /* Procedimiento para actualizar una sucursal */
     case 'actualizar':
