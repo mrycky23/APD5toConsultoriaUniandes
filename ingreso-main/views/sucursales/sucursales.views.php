@@ -51,7 +51,7 @@
                     </div>
                     <div class="form-group">
                         <label for="Nombres">	Telefono</label>
-                        <input type="text" name="Telefonon" id="Telefono" class="form-control" placeholder="Ingrese su telefono" require>
+                        <input type="text" name="Telefono" id="Telefono" class="form-control" placeholder="Ingrese su telefono" require>
                     </div>
                     <div class="form-group">
                         <label for="Nombres">Correo Electrónico</label>
@@ -59,15 +59,15 @@
                     </div>
                     <div class="form-group">
                         <label for="Nombres">Parroquia</label>
-                        <input type="email" name="	Parroquia" id="	Parroquia" class="form-control" placeholder="Ingrese su Parroquia" require>
+                        <input type="text" name="	Parroquia" id="	Parroquia" class="form-control" placeholder="Ingrese su Parroquia" require>
                     </div>
                     <div class="form-group">
                         <label for="Nombres">Canton</label>
-                        <input type="email" name="	Canton" id="	Canton" class="form-control" placeholder="Ingrese su Cantón" require>
+                        <input type="text" name="	Canton" id="	Canton" class="form-control" placeholder="Ingrese su Cantón" require>
                     </div>
                     <div class="form-group">
                         <label for="Nombres">Provincia</label>
-                        <input type="email" name="	Provincia" id="	Provincia" class="form-control" placeholder="Ingrese su Provincia" require>
+                        <input type="text" name="	Provincia" id="	Provincia" class="form-control" placeholder="Ingrese su Provincia" require>
                     </div>
                 </div>
                 <div class="modal-footer">

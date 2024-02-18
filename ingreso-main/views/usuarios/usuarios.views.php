@@ -43,7 +43,7 @@
                         <input type="text" name="Nombres" id="Nombres" class="form-control" placeholder="Ingrese sus nombres" require>
                     </div>
                     <div class="form-group">
-                        <label for="Nombres">Apelldios</label>
+                        <label for="Nombres">Apellidos</label>
                         <input type="text" name="Apellidos" id="Apellidos" class="form-control" placeholder="Ingrese sus apellidos" require>
                     </div>
                     <div class="form-group">
